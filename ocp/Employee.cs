@@ -6,7 +6,7 @@
         private int _bonus;
         private EmployeeType _type;
 
-        Employee(int salary, int bonus, EmployeeType type)
+        public Employee(int salary, int bonus, EmployeeType type)
         {
             this._salary = salary;
             this._bonus = bonus;
