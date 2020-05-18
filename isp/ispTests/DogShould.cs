@@ -1,17 +1,19 @@
 ﻿using isp;
 using NUnit.Framework;
 using System;
-using System.CodeDom;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ispTests
 {
     [TestFixture]
-    public class BirdShould
+    public class DogShould
     {
         private StringBuilder _consoleContent = new StringBuilder();
-        private Bird bird = new Bird();
+        private Dog dog = new Dog();
         private StringWriter _writer;
 
         [SetUp]
@@ -30,20 +32,21 @@ namespace ispTests
             _consoleContent.Clear();
         }
 
+
         [Test]
         public void run()
         {
-            bird.run();
+            dog.run();
             RemoveLineBreakers();
-            Assert.AreEqual("Bird is running", _consoleContent.ToString());
+            Assert.AreEqual("Dog is running", _consoleContent.ToString());
         }
 
         [Test]
-        public void fly()
+        public void bark()
         {
-            bird.fly();
+            dog.bark();
             RemoveLineBreakers();
-            Assert.AreEqual("Bird is flying", _consoleContent.ToString());
+            Assert.AreEqual("Dog is barking", _consoleContent.ToString());
         }
 
         private void RemoveLineBreakers()
