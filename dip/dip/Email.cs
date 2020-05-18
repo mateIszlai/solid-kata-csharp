@@ -6,7 +6,7 @@
         public string Subject { get; private set; }
         public string Message { get; private set; }
 
-        Email(string to, string subject, string message)
+        public Email(string to, string subject, string message)
         {
             To = to;
             Subject = subject;
