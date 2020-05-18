@@ -2,21 +2,21 @@
 {
     public abstract class Vehicle
     {
-        private bool engineStarted = false;
+        private bool _engineStarted = false;
 
         public void startEngine()
         {
-            this.engineStarted = true;
+            _engineStarted = true;
         }
 
         public bool engineIsStarted()
         {
-            return engineStarted;
+            return _engineStarted;
         }
 
         public void stopEngine()
         {
-            this.engineStarted = false;
+            _engineStarted = false;
         }
 
         public abstract void fillUpWithFuel();
