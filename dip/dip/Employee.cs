@@ -9,7 +9,7 @@ namespace dip
         public DateTime DateOfBirth { get; private set; }
         public string Email { get; private set; }
 
-        Employee(string firstName, string lastName, DateTime dateOfBirth, string email)
+        public Employee(string firstName, string lastName, DateTime dateOfBirth, string email)
         {
             FirstName = firstName;
             LastName = lastName;
