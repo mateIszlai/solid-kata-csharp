@@ -25,7 +25,7 @@ namespace dipTests
         {
             _employeeRepository = Substitute.For<IEmployeeRepository>();
             _clock = Substitute.For<IClock>();
-            _birthdayGreeter = new BirthdayGreeter(_employeeRepository, (Clock) _clock); //TODO
+            _birthdayGreeter = new BirthdayGreeter(_employeeRepository, _clock);
         }
 
 
@@ -49,12 +49,17 @@ namespace dipTests
             //given(employeeRepository.findEmployeesBornOn(MonthDay.of(CURRENT_MONTH, CURRENT_DAY_OF_MONTH))).willReturn(Collections.singletonList(employee));
 
             _birthdayGreeter.sendGreetings();
-
+            RemoveLineBreakers();
             string actual = _consoleContent.ToString();
             Assert.AreEqual($"To:{employee.Email}, Subject: Happy birthday!, Message: Happy birthday, dear {employee.FirstName}!", actual);
             //assertThat(actual)
               //      .isEqualTo("To:" + employee.getEmail() + ", Subject: Happy birthday!, Message: Happy birthday, dear " + employee.getFirstName() + "!");
 
+        }
+
+        private void RemoveLineBreakers()
+        {
+            _consoleContent.Remove(_consoleContent.Length - 2, 2);
         }
     }
 }

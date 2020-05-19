@@ -3,9 +3,9 @@
     public class BirthdayGreeter
     {
         private readonly IEmployeeRepository _employeeRepository;
-        private readonly Clock _clock;
+        private readonly IClock _clock;
 
-        public BirthdayGreeter(IEmployeeRepository employeeRepository, Clock clock)
+        public BirthdayGreeter(IEmployeeRepository employeeRepository, IClock clock)
         {
             _employeeRepository = employeeRepository;
             _clock = clock;
