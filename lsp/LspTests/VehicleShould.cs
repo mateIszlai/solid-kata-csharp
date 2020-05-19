@@ -30,14 +30,14 @@ namespace LspTests
         public class TestableVehicle : Vehicle
         {
 
-            public override void fillUpWithFuel()
+            public override void Refuel()
             {
-
+            
             }
 
-            public override void chargeBattery()
+            public override void Charge()
             {
-
+   
             }
         }
     }

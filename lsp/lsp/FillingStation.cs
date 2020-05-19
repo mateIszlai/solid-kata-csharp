@@ -4,16 +4,12 @@
     {
         public void refuel(Vehicle vehicle)
         {
-            if (typeof(PetrolCar).IsInstanceOfType(vehicle)) {
-                vehicle.fillUpWithFuel();
-            }
+            vehicle.Refuel();
         }
 
         public void charge(Vehicle vehicle)
         {
-            if (typeof(ElectricCar).IsInstanceOfType(vehicle)) {
-                vehicle.chargeBattery();
-            }
+            vehicle.Charge();
         }
     }
 }

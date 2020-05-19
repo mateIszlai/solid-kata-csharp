@@ -1,6 +1,6 @@
 ﻿namespace lsp
 {
-    public abstract class Vehicle
+    public abstract class Vehicle : IChargable, IRefuelable
     {
         private bool _engineStarted = false;
 
@@ -19,8 +19,7 @@
             _engineStarted = false;
         }
 
-        public abstract void fillUpWithFuel();
-
-        public abstract void chargeBattery();
+        public abstract void Refuel();
+        public abstract void Charge();
     }
 }

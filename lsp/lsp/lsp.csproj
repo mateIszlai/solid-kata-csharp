@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="ElectricCar.cs" />
     <Compile Include="FillingStation.cs" />
+    <Compile Include="IChargable.cs" />
+    <Compile Include="IRefuelable.cs" />
     <Compile Include="PetrolCar.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

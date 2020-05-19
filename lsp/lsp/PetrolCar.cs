@@ -7,15 +7,14 @@ namespace lsp
         private const int FUEL_TANK_FULL = 100;
         public int FuelTankLevel { get; private set; }
 
-
-        public override void fillUpWithFuel()
+        public override void Charge()
         {
-            FuelTankLevel = FUEL_TANK_FULL;
+            
         }
 
-        public override void chargeBattery()
+        public override void Refuel()
         {
-            throw new InvalidOperationException("A petrol car cannot be recharged");
+           FuelTankLevel = FUEL_TANK_FULL;
         }
     }
 }

@@ -8,15 +8,14 @@ namespace lsp
 
         public int BatteryLevel { get; private set; }
 
-        public override void fillUpWithFuel()
+        public override void Refuel()
         {
-            throw new InvalidOperationException("It's an electric car");
+            
         }
 
-        public override void chargeBattery()
+        public override void Charge()
         {
-            BatteryLevel = BATTERY_FULL;
+           BatteryLevel = BATTERY_FULL;
         }
-
     }
 }
