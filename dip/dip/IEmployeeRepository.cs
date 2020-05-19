@@ -8,13 +8,9 @@ namespace dip
         List<Employee> findEmployeesBornOn(MonthDay monthDay);
     }
 
-    public struct MonthDay : IEquatable<MonthDay>
+    public struct MonthDay
     {
         public int Month { get; set; }
         public int Day { get; set; }
-        public bool Equals(MonthDay other)
-        {
-            return other.Month == Month && other.Day == Day;
-        }
     }
 }

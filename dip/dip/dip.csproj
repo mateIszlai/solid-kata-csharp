@@ -46,6 +46,7 @@
     <Compile Include="Email.cs" />
     <Compile Include="EmailSender.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="IClock.cs" />
     <Compile Include="IEmployeeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

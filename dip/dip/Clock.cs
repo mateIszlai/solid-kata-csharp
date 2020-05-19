@@ -2,15 +2,12 @@
 
 namespace dip
 {
-    public class Clock
+    public class Clock : IClock
     {
-        public MonthDay MonthDay
+        public MonthDay MonthDay()
         {
-            get
-            {
-                var date = DateTime.Today;
-                return new MonthDay { Day = date.Day, Month = date.Month };
-            }
+            var date = DateTime.Today;
+            return new MonthDay { Day = date.Day, Month = date.Month };
         }
     }
 }

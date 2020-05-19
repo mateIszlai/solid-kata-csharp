@@ -13,7 +13,7 @@
 
         public void sendGreetings()
         {
-            MonthDay today = _clock.MonthDay;
+            MonthDay today = _clock.MonthDay();
             _employeeRepository.findEmployeesBornOn(today)
                 .ConvertAll(employee => emailFor(employee))
                 .ForEach(email => new EmailSender().send(email));
